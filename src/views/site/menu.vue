@@ -1,5 +1,18 @@
 <template>
-    <v-list>
+  <div>
+    <v-list-item>
+      <v-list-item-content>
+        <v-list-item-title class="title">
+          Application
+        </v-list-item-title>
+        <v-list-item-subtitle>
+          subtext
+        </v-list-item-subtitle>
+      </v-list-item-content>
+    </v-list-item>
+    <v-divider></v-divider>
+
+     <v-list>
       <v-list-group
         v-for="(item, i) in items"
         :key="i"
@@ -24,13 +37,42 @@
         </v-list-item>
       </v-list-group>
     </v-list>
+  </div>
 </template>
+
 <script>
 export default {
-  props: ['items'],
+  props: ['footer'],
   data () {
     return {
+      items: [
+        {
+          title: 'home',
+          icon: 'mdi-home',
+          subItems: [
+            {
+              title: 'Dashboard',
+              to: '/'
+            },
+            {
+              title: 'About',
+              to: '/about'
+            }
+          ]
+        },
+        {
+          title: 'about',
+          active: true,
+          icon: 'mdi-account-badge',
+          subItems: [
+            {
+              title: 'xxx',
+              to: '/xxx'
+            }
+          ]
 
+        }
+      ]
     }
   }
 }
