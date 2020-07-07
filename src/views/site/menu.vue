@@ -27,15 +27,33 @@
         </template>
 
         <v-list-item
-          v-for="subItem in item.subItems"
-          :key="subItem.title"
+          v-for="(subItem, j) in item.subItems"
+          :key="j"
           :to="subItem.to"
         >
           <v-list-item-content>
             <v-list-item-title v-text="subItem.title"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item>
+        <v-list-item-icon>
+          <v-icon>mdi-plus</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+            <v-list-item-title>서브추가하기</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
       </v-list-group>
+
+      <v-list-item>
+        <v-list-item-icon>
+          <v-icon>mdi-plus</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+            <v-list-item-title>추가하기</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
     </v-list>
   </div>
 </template>
@@ -68,6 +86,10 @@ export default {
             {
               title: 'xxx',
               to: '/xxx'
+            },
+            {
+              title: 'board',
+              to: '/board'
             }
           ]
 
