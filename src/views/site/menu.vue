@@ -35,24 +35,24 @@
             <v-list-item-title v-text="subItem.title"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <!-- <v-list-item>
         <v-list-item-icon>
           <v-icon>mdi-plus</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
             <v-list-item-title>서브추가하기</v-list-item-title>
         </v-list-item-content>
-      </v-list-item>
+      </v-list-item> -->
       </v-list-group>
 
-      <v-list-item>
+      <!-- <v-list-item>
         <v-list-item-icon>
           <v-icon>mdi-plus</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
             <v-list-item-title>추가하기</v-list-item-title>
         </v-list-item-content>
-      </v-list-item>
+      </v-list-item> -->
 
     </v-list>
   </div>
@@ -83,13 +83,17 @@ export default {
           active: true,
           icon: 'mdi-account-badge',
           subItems: [
-            {
-              title: 'xxx',
-              to: '/xxx'
-            },
+            // {
+            //   title: 'xxx',
+            //   to: '/xxx'
+            // },
             {
               title: 'board',
               to: '/board'
+            },
+            {
+              title: 'storage',
+              to: '/storage'
             }
           ]
 
